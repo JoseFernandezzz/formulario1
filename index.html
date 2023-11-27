@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formulario reserva hotel-Mi Web</title>
+<style>
+    body{
+        background-color:antiquewhite;
+    }
+    button,
+    input,
+    select,
+    textarea {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 100%;
+        width: 150px;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box; ;
+        
+    }
+    h1 {
+        font: 1em "typewriter", monospace;
+        align-self: end;
+    }
+    form {
+        position:relative;
+        width: 900px;
+        height: 498px;
+        margin: 0 auto;
+        padding: 1em;
+        box-sizing: border-box;
+        background: #fff url(background.jpg);
+        display: grid;
+        grid-gap: 25px;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .titulo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    input:focus {
+        background: antiquewhite ;
+        border-radius: 5px;
+    }
+    #nombre{
+        margin-left: 5px;
+    }
+    #dni{
+        margin-left: 27px;
+    }
+    #correo{
+        margin-left:18px ;
+    }
+    #sexo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid 1px;
+        padding: 5px;
+    }
+    #pago{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid 1px;
+        padding: 5px;
+    }
+    #publi{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #datos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    img{
+        height: 20px;
+    }
+    #botones{
+        background-color: azure;
+        border: solid 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .seccion{
+        
+    }
+
+</style>
+</head>
+<body>
+<div class="contenedor">
+    <div class="titulo">
+        <h1>Formulario reserva hotel</h1>
+    </div>
+    <div>
+        <form method="GET">
+
+            <div class="seccion" id="nombre">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" maxlength="50"><br>
+                <br>
+            </div>
+
+            <div id="apellido">
+                <label for="apellido">Apellidos:</label>
+                <input type="text" id="Surname" name="Surname" maxlength="50"><br>
+                <br>
+            </div>
+            <div id="dni">
+                <label for="DNI">DNI:</label>
+                <input type="text" id="DNI" name="DNI"><br>
+                <br>
+            </div>
+            <div id="correo">
+                <label for="Correo">Correo:</label>
+                <input type="text" id="Correo" name="Correo"><br>
+                <br>
+            </div>
+            <div id="telefono">
+                <label for="Telefono">Telefono:</label>
+                <input type="text" id="Telefono" name="Telefono"><br>
+                <br>
+            </div>
+            <div id="pago">
+                <label for="PAGO">Como va a efectuar el pago:</label>
+                <input type="radio" id="hombre" name="PAGO" value="">
+                <label for="hombre"><img src="img/visa.png" alt=""></label>
+                <input type="radio" id="mujer" name="SEX" value="">
+                <label for="mujer">Al llegar al hotel</label><br>
+                <br>
+            </div>
+            <div id="habitacion">
+                <label for="habitacion">Habitaciones Disponibles:</label>
+                <select name="lenguajes" id="lang">
+                    <option value="Simple Individual">Simple Individual</option>
+                    <option value="Simple doble">Simple doble</option>
+                    <option value="Suite Individual">Suite Individual</option>
+                    <option value="Suite Doble">Suite Doble</option>
+                    <option value="Familiar">Familiar</option>
+                </select><br>
+                <br>
+            </div>
+            <div id="sexo">
+                <label for="Sex">Sexo:</label>
+                <input type="radio" id="hombre" name="SEX" value="">
+                <label for="hombre">Hombre</label>
+                <input type="radio" id="mujer" name="SEX" value="">
+                <label for="mujer">Mujer</label><br>
+                <br>
+            </div>
+            <div id="publi">
+                <input type="checkbox" id="Publi" name="Publi" value="" checked>
+                <label for="Publi">Deseo recibir información sobre
+                novedades y ofertas</label><br>
+                <br>
+            </div>
+            <div id="datos">
+                <input type="checkbox" id="Datos" name="Datos" value="">
+                <label for="Datos">Declaro haber leido y aceptar las
+                condiciones generales del programa y la normativa sobre protección de datos</label><br>
+                <br>
+            </div>
+            <div id="botones">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </div>
+            
+            </form>
+    </div>
+    
+    
+</div>
+</body>
+</html>
